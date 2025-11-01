@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "计算机/git和github.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "git和github"
             }
           }
         ]
@@ -173,8 +173,11 @@
   },
   "active": "c7b926f71b87ef99",
   "lastOpenFiles": [
-    "gitignore.md",
     "README.md",
+    "Obsidian的使用.md",
+    "计算机/操作系统/Linux/linux系统.md",
+    "计算机/git和github.md",
+    "gitignore.md",
     "计算机/编程/C++/C++标准库/C++随机数.md",
     "计算机/编程/C++/C++.md",
     "计算机/编程.md",
@@ -194,12 +197,9 @@
     "模板/人物.md",
     "模板/地点.md",
     "计算机/编程/java/static 修饰符.md",
-    "Obsidian的使用.md",
     "考试需要（旧）/大学.exe/大学.exe  河软.md",
     "IT社团.md",
     "临时笔记（爱好菜单？）.md",
-    "单招计划.md",
-    "带学校的物品清单.md",
     "MyNotes",
     "MyGithubNotes/MyNotes",
     "MyGithubNotes",

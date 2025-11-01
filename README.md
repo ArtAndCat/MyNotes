@@ -7,3 +7,7 @@
 等会儿！？ obsdian有git插件！？  en.......
 
 那就用git插件吧
+
+教程： https://blog.guizimo.com/archives/x36CnPAP
+
+
