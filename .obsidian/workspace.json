@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机/git和github.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git和github"
+              "title": "README"
             }
           }
         ]
@@ -173,10 +173,10 @@
   },
   "active": "c7b926f71b87ef99",
   "lastOpenFiles": [
+    "计算机/git和github.md",
     "README.md",
     "Obsidian的使用.md",
     "计算机/操作系统/Linux/linux系统.md",
-    "计算机/git和github.md",
     "gitignore.md",
     "计算机/编程/C++/C++标准库/C++随机数.md",
     "计算机/编程/C++/C++.md",

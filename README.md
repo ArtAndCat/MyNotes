@@ -10,4 +10,7 @@
 
 教程： https://blog.guizimo.com/archives/x36CnPAP
 
+`Ctrl + p` 打开控制台
+pull 拉取
 
+push 提交
