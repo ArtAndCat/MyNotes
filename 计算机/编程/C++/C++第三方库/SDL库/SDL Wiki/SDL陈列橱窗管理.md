@@ -1,0 +1,24 @@
+#C #SDL #菜单
+
+
+
+
+SDL_BlendMode
+[[SDL_CreateWindow创建窗口]]
+SDL_CreateWindowFrom
+[[SDL_DestroyWindow销毁窗口]]
+SDL_DisplayMode
+SDL_GLattr
+SDL_GLcontextFlag
+SDL_GLprofile
+SDL_HitTestResult
+SDL_MessageBoxButtonData
+SDL_MessageBoxButtonFlags
+SDL_MessageBoxColor
+SDL_MessageBoxColorScheme
+SDL_MessageBoxColorType
+SDL_MessageBoxData
+SDL_MessageBoxFlags
+SDL_WindowEvent
+SDL_WindowEventID
+SDL_WindowFlags

@@ -1,0 +1,194 @@
+{
+  "main": {
+    "id": "67c676b9a15f9a7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "7d9cfd93331f052e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ef6d7a6baa16bd4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "70b3319741d543a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d41ff42e2a0e9911",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f8279571d4a3edf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0199bc6d9e19fcb4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "osi",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "85c248d4073382f4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "966966bc8ae5ec6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "052cb79af08ea9b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b98e0871f81a771e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4712d9bcb087e834",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e9af12d71cc9f739",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5acdc26cabde6bc2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "floating": {
+    "id": "87a7d0a73d16eecd",
+    "type": "floating",
+    "children": [
+      {
+        "id": "c3dbc2a12a9339fb",
+        "type": "window",
+        "children": [
+          {
+            "id": "dc7852def0dfc1fb",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "eb3473a784d58dd3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "计算机网络基础.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 117,
+        "y": 194,
+        "width": 617,
+        "height": 860,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "5ef6d7a6baa16bd4",
+  "lastOpenFiles": [
+    "计算机网络基础.md",
+    "？？？.md",
+    "png/捕获.PNG",
+    "短笔记/tcp_ip与osi_iso/OSI_ISO 网络分层模型.md",
+    "小贾的课.md",
+    "网络.md",
+    "png/aaa1.PNG",
+    "protobuf网络通讯.md",
+    "png/aaa.PNG",
+    "png",
+    "新建文件夹"
+  ]
+}
