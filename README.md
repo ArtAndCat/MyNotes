@@ -6,11 +6,15 @@
 
 等会儿！？ obsdian有git插件！？  en.......
 
-那就用git插件吧
+那就用git插件吧！！
 
 教程： https://blog.guizimo.com/archives/x36CnPAP
 
-`Ctrl + p` 打开控制台
-pull 拉取
+在obsidian 按下`Ctrl + p` 打开控制台
 
-push 提交
+pull 拉取github的笔记
+
+commit all changes 保存笔记中的修改到暂存区
+
+push 提交暂存区到github
+
