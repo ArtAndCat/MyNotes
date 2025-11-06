@@ -17,6 +17,6 @@ pull 拉取github的笔记
 
 commit all changes 保存笔记中的修改到暂存区
 
-push 提交暂存区到github
+push 提交暂存区的修改到github
 
 

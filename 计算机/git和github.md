@@ -95,7 +95,7 @@ Hi [你的名字]! You've successfully authenticated, but GitHub does not provid
 
 
 
-# 5. 常用操作
+### 4. Git 常用操作
  
 [[Git]]           [[常用Git命令清单]]
 

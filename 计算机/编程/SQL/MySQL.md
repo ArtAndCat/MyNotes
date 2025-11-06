@@ -27,7 +27,7 @@ MySQL启动:  （旧）
 ```
 
 
-启动 MySQL 服务
+启动 MySQL 服务  （arch linux）
 ```sql
 sudo systemctl start mysqld
 ```
