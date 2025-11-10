@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机/编程/C++/C++.md",
+                "file": "计算机/编程/SQL/MySQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "C++ 的出链列表"
+              "title": "MySQL 的出链列表"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机/编程/C++/C++.md",
+                "file": "计算机/编程/SQL/MySQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "C++ 的大纲"
+              "title": "MySQL 的大纲"
             }
           },
           {
@@ -201,12 +201,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "计算机/编程/SQL/MySQL.md",
+                    "file": "计算机/编程/SQL/懒人数据库.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "MySQL"
+                  "title": "懒人数据库"
                 }
               }
             ]
@@ -215,18 +215,18 @@
         "direction": "vertical",
         "x": 5,
         "y": 39,
-        "width": 1356,
+        "width": 442,
         "height": 724,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "79fb08ef42c9228e",
+  "active": "c7b926f71b87ef99",
   "lastOpenFiles": [
-    "计算机/编程/C++/C++标准库/C++数据交换.md",
     "计算机/编程/SQL/MySQL.md",
     "计算机/编程/C++/C++.md",
+    "计算机/编程/C++/C++标准库/C++数据交换.md",
     "计算机/编程/C++/C++标准库/C++数学.md",
     "计算机/编程/C++/C++第三方库/socket网络/C++sys_socket.h.md",
     "计算机/编程.md",

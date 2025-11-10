@@ -205,7 +205,8 @@ UPDATE 表名 SET 字段名1 = 值1, 字段名2 = 值2, ... [ WHERE 条件 ];
 ```SQL
 DELETE FROM 表名 [ WHERE 条件 ];
 ```
-
+例；`SELECT * FROM students WHERE city = '北京';`  查询
+`DELETE FROM students WHERE city = '北京';` 删除
 #### DQL Data <font style="color:rgb(150,150,250)">Query</font> Language（数据查询）
 ---
 语法：
