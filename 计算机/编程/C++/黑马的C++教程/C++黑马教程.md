@@ -248,6 +248,25 @@ if (堆区指针 != nullptr){
 }
 ```
 但浅拷贝时两个对象都指向同一个堆区空间，==解析函数会重复释放导致非法操作==，所以需要自己写==拷贝构造函数==
+
+```cpp
+// 拷贝构造函数（来源：deepseek-R1 因为我笔记没写深拷贝应该怎么写）
+MyString(const MyString &other){
+	// 分配新内存
+	strsize = other.strsize;
+	str = new char[strsize];
+	// 复制内容
+	char *temp1 = str;
+	char *temp2 = other.str;
+	
+	for (int i = 0; i < strsize; ++i){
+		*temp1 = *temp2
+		++temp1;
+		++temp2;
+	}
+}
+```
+
 #### 初始化列表  28
 作用:c++提供初始化列表,用来初始化属性
 ```cpp
@@ -458,6 +477,7 @@ cout << 对象3 <<...
 ```
 编译器就会报错，怎么办呢？（链式编程）
 ```cpp
+// 写到全局！！ 不要写在你的类里！！
 ostream & ​operator<< (ostream &名字,类 &对象2){
 	 名字 << 对象2.属性1 << 对象2.属性2  ....
 	 return 名字;
