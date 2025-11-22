@@ -63,7 +63,95 @@ func(MyString("Hello"));  // ✅ 显式构造，OK
 ### 例子:
 
 
-#  **2. 析构函数**  
+# **2. 析构函数**  
+如果使用了动态内存分配或资源管理，记得写析构函数来避免资源泄漏
+#### 2.1 基本语法
+```cpp
+~类名() { /* 清理代码 */  }
+```
+**特点**：无参数，无返回值，不能重载，每个类只有一个析构函数
+#### 2.2 默认析构函数
+当类没有显式定义析构函数时，编译器会自动生成一个
+**效果**：逐个销毁数据成员，对于类类型成员调用其析构函数
+#### 2.3 需要自定义析构函数的情况
+1. new的空间
+2. 一些需要手动关闭/释放的 (成员有写析构函数的可不写)
+#### 2.4 虚析构函数
+当类可能被继承时，应将析构函数声明为虚函数
+子类:
+```cpp
+virtual ~类1() /* 虚析构函数 */ { /* 清理代码 */ }
+```
+父类:   (`class 类2 : public 类1 `)
+```cpp
+~类2() override /* 自动成为虚函数 */ { /* 派生类清理代码 */ }
+```
+**效果**：通过基类指针删除派生类对象时，能正确调用整个继承链的析构函数
+#### 补充内容
+###### **析构函数调用时机**
+```cpp
+
+{
+    MyClass obj;           // 自动存储期对象
+    MyClass* ptr = new MyClass();  // 动态存储期对象
+    
+} // 离开作用域：obj的析构函数自动调用
+  // ptr指向的对象需要手动 delete
+```
+
+###### **RAII模式示例**
+```cpp
+class SmartArray {
+    int* data;
+    size_t size;
+public:
+    SmartArray(size_t n) : data(new int[n]), size(n) {}
+    
+    ~SmartArray() {
+        delete[] data;  // 自动释放资源
+        data = nullptr;
+        size = 0;
+    }
+    
+    // 其他成员函数...
+};
+
+// 使用：无需手动管理内存
+void func() {
+    SmartArray arr(100);  // 构造函数分配内存
+    // 使用arr...
+} // 离开作用域时析构函数自动释放内存
+
+```
+###### **三/五法则**
+
+如果定义了以下任何一个，通常需要定义全部：
+- 析构函数
+- 拷贝构造函数
+- 拷贝赋值运算符
+- 移动构造函数（C++11）
+- 移动赋值运算符（C++11）
+```cpp
+class RuleOfFive {
+    char* data;
+public:
+    // 构造函数
+    RuleOfFive(const char* str);
+    
+    // 析构函数
+    ~RuleOfFive() { delete[] data; }
+    
+    // 拷贝控制
+    RuleOfFive(const RuleOfFive& other);
+    RuleOfFive& operator=(const RuleOfFive& other);
+    
+    // 移动控制（C++11）
+    RuleOfFive(RuleOfFive&& other) noexcept;
+    RuleOfFive& operator=(RuleOfFive&& other) noexcept;
+};
+```
+
+
 
 2.1 析构函数调用时机  
 2.2 虚析构函数的重要性  
