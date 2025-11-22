@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机/编程/C++/C++标准库/C++字符串长度计算.md",
+                "file": "计算机/操作系统/Linux/linux系统.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++字符串长度计算"
+              "title": "linux系统"
             }
           }
         ]
@@ -184,17 +184,19 @@
   },
   "active": "4a5711b3d5efbdec",
   "lastOpenFiles": [
-    "计算机/编程/C/C.md",
     "计算机/编程/C++/C++.md",
+    "计算机/编程/C/杂/C语言格式说明符完整表格.md",
+    "计算机/编程/C/C.md",
+    "计算机/编程/C++/C++标准库/C++iostream标准输入输出流.md",
+    "计算机/编程/C++/杂/C++多文件编程.md",
+    "计算机/编程/C++/C++标准库/C++字符串长度计算.md",
     "计算机/编程/C++/C++标准库/C++随机数.md",
     "计算机/编程/C++/C++标准库/C++STL库 （标准模板库）.md",
-    "计算机/编程/C++/C++标准库/C++字符串长度计算.md",
     "计算机/编程/C++/C++标准库/STL库/STL算法.md",
     "计算机/编程/SQL/MySQL.md",
     "计算机/编程/C++/黑马的C++教程/C++黑马教程.md",
     "临时文件夹/拼图小队.md",
     "计算机/编程/SQL/SQL.md",
-    "计算机/编程/C/杂/C语言格式说明符完整表格.md",
     "计算机/编程/C++/C++标准库/C++延迟.md",
     "计算机/编程/C++/C++标准库/C++文件读写.md",
     "计算机/编程/C++/C++标准库/arpa_inet.h.md",
@@ -208,8 +210,6 @@
     "README.md",
     "Obsidian的使用.md",
     "计算机/操作系统/Linux/linux系统.md",
-    "计算机/操作系统/Linux/代理.md",
-    "计算机/操作系统/盘根目录的文件(夹)都有什么用.md",
     "计算机/编程/C/杂",
     "MyNotes",
     "MyGithubNotes/MyNotes",

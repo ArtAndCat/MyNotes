@@ -12,7 +12,6 @@
 
 [[C++如何安装与使用第三方库]]
 
-
 ```cpp
 #include <iostream>
 using namespace std;
@@ -26,6 +25,21 @@ int main(){//程序开始的地方
 ## [[C++关键字]]
 
 外部笔记：[[计算机/外部笔记/notes-master 1/Linux/C++|C++]]
+
+### g++ 编译
+
+```shell
+# 完整命令示例
+g++ -std=c++17 -g -Wall -Wextra -O2 main.cpp -o program
+
+# 选项解释：
+# -std=c++17  使用 C++17 标准
+# -g          包含调试信息
+# -Wall       启用所有警告
+# -Wextra     启用额外警告
+# -O2         优化级别 2
+# -o program  指定输出文件名
+```
 ### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">C++异常处理</font></div>
 
 关键字：

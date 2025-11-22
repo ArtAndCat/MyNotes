@@ -38,7 +38,11 @@ sudo vim /etc/pacman.d/mirrorlist
 ### 娱乐(需要下载)
 
 ```shell
-cmatrix
+cmatrix   
+```
+
+```shell
+cbonsai -l -i -t 0.5 -L 32 -k 213,94,218,94 -w 10
 ```
 # 基础命令
 
