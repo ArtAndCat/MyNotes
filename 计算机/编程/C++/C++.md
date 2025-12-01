@@ -6,6 +6,8 @@
 [[C++黑马教程]]      [[C++ Primer Plus]]
 [[C++面向对象 封装  继承  多态]]
 
+### [[C++ 特殊成员函数]]
+
 [[数据结构与算法]]        [[C++STL库 （标准模板库）]] ==<---==
 
 [[C++多文件编程]]
@@ -69,6 +71,7 @@ return -1;
 [[C++functional库]]  调用非静态函数  C++11
 [[C++数据交换]]
 [[C++字符串长度计算]]
+[[C++cstring]]
 ### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">C++三方库</font></div>
 
 图形库：

@@ -1,7 +1,9 @@
 
 建议先看[[C++黑马教程#构造函数（初始化）和分析函数（删除） 23]] 这一块的内容 要不然你看不懂这里的笔记 (补充 我笔记你看不懂的 建议看原视频)
 
-
+**三/五法则总结**：
+- **三法则**：如果需要自定义析构函数、拷贝构造函数、拷贝赋值运算符中的任何一个，通常需要全部三个
+- **五法则**：三法则 + 移动构造函数(C++11) 和 移动赋值运算符(C++11)
 # **1. 构造函数**
 如果使用了 `new` 记得写配套的[析构函数](#**2. 析构函数**)和[拷贝控制函数]()
 #### 1.1 默认构造
@@ -27,7 +29,7 @@ const成员  引用成员  无默认构造的成员 只能通过这个赋值 具
 **例子** : `Tank() : HP(180) {  }  `
 #### 1.5 explicit构造函数：禁止隐式转换
 ```cpp
-explicit 类名(类型 参数) {  }
+explicit 类名(类型 名称) {  }
 ```
 **效果**：禁止 `类名 对象 = 参数;` 这种隐式转换
 #### 补充内容
@@ -162,71 +164,192 @@ public:
 # **3. 拷贝语义**
 
 
-3.1 拷贝构造函数深度解析  
-3.2 拷贝赋值运算符实现  
-3.3 深拷贝与浅拷贝区别  
-3.4 自赋值检查的必要性  
-3.5 拷贝控制的三法则
+#### 3.1 拷贝构造函数  
+```cpp
+类名(const 类名& 对象名 = __ ){  }
+```
+#### 3.2 拷贝赋值运算符实现 [[C++ 特殊成员函数#**5. 运算符重载**]]
+```cpp
+Strings& operator=(const String& other) {
+```
+- 必须处理自赋值情况
+#### 3.3 深拷贝与浅拷贝区别  
+深拷贝: 复制指针指向的数据 
+浅拷贝: 复制指针 指向同一个地址
+```cpp
+String(const String& other) 
+    : length(other.length) {
+    // 深度拷贝
+    data = new char[length + 1];
+	std::strcpy(data, other.data);
+}
+```
+#### 3.4 自赋值检查
 
-# **4. 移动语义**  
+```cpp
+// 方法1：显式检查
+if (this == &other) {
+    return *this;
+}  
+// 方法2：拷贝并交换惯用法（更安全）
+int* newData = new int(*other.data);  // 先分配
+delete data;                          // 后释放
+data = newData;
+```
+#### 3.5 拷贝控制的五法则
 
-4.1 移动构造函数原理  
-4.2 移动赋值运算符实现  
-4.3 右值引用详解  
-4.4 std::move 内部机制  
-4.5 移动语义的性能优势  
-4.6 五法则现代实践
+```cpp
+class RuleOfFive {
+    char* buffer;
+    size_t size;
+public:
+    // 基本构造函数
+    RuleOfFive(const char* str = "") : size(std::strlen(str)) {
+        buffer = new char[size + 1];
+        std::strcpy(buffer, str);
+    }
+    
+    // 1. 析构函数
+    ~RuleOfFive() { delete[] buffer; }
+    
+    // 2. 拷贝构造函数
+    RuleOfFive(const RuleOfFive& other) : size(other.size) {
+        buffer = new char[size + 1];
+        std::strcpy(buffer, other.buffer);
+    }
+    
+    // 3. 拷贝赋值运算符
+    RuleOfFive& operator=(const RuleOfFive& other) {
+        RuleOfFive temp(other);  // 拷贝构造
+        swap(*this, temp);       // 交换
+        return *this;            // temp析构清理旧资源
+    }
+    
+    // 4. 移动构造函数（C++11）
+    RuleOfFive(RuleOfFive&& other) noexcept 
+        : buffer(other.buffer), size(other.size) {
+        other.buffer = nullptr;  // 置空源对象
+        other.size = 0;
+    }
+    
+    // 5. 移动赋值运算符（C++11）
+    RuleOfFive& operator=(RuleOfFive&& other) noexcept {
+        if (this != &other) {
+            delete[] buffer;        // 释放当前资源
+            buffer = other.buffer;  // 接管资源
+            size = other.size;
+            other.buffer = nullptr; // 置空源对象
+            other.size = 0;
+        }
+        return *this;
+    }
+    
+    // 交换函数
+    friend void swap(RuleOfFive& a, RuleOfFive& b) noexcept {
+        using std::swap;
+        swap(a.buffer, b.buffer);
+        swap(a.size, b.size);
+    }
+};
+```
+# **4. 移动语义**  (C++11)
+
+#### 4.1 移动构造函数原理  
+```cpp
+
+类名(类名&& other) noexcept {
+    other.data = nullptr;  // 关键：使源对象处于有效但空的状态
+    other.size = 0;
+}
+```
+1. **参数类型**：`类名&&`（右值引用）
+2. 添加初始化列表  来 不分配新资源：直接接管已有资源   ==
+3. 令 other 指向 nullptr 置空源对象：防止双重释放  ===
+4. **noexcept声明**：确保容器操作的安全 提高运行速度
+#### 4.2 移动赋值运算符
+
+```cpp
+类名& operator=(类名&& other) noexcept {  }
+```
+
+```cpp
+// 提供交换函数以便实现拷贝并交换惯用法
+void swap(MyString& other) noexcept {
+    std::swap(data, other.data);
+    ...
+}
+```
+#### 4.3 右值引用详解  
+- **左值引用**：`T&`，绑定到有名称的对象（左值）
+- **右值引用**：`T&&`，绑定到临时对象（右值）
+```cpp
+
+
+
+```
+###### 万能引用（Universal Reference）
+```cpp
+template<typename T>
+void func(T&& param) {  // T&& 可能是左值引用或右值引用
+    // 使用 std::forward 完美转发
+    other_func(std::forward<T>(param));
+}```
+#### 4.4 std::move 内部机制  
+
+
+#### 4.5 移动语义的性能优势  
+
 # **5. 运算符重载**  
 
-5.1 算术运算符重载  
-5.2 关系运算符重载  
-5.3 下标运算符重载  
-5.4 函数调用运算符  
-5.5 递增递减运算符  
-5.6 流运算符重载
+#### 5.1 算术运算符重载  
+#### 5.2 关系运算符重载  
+#### 5.3 下标运算符重载  
+#### 5.4 函数调用运算符  
+#### 5.5 递增递减运算符  
+#### 5.6 流运算符重载
 # **6. 类型转换函数** 
 
-6.1 转换运算符定义  
-6.2 explicit 转换控制  
-6.3 类型转换序列  
-6.4 转换中的二义性避免
+#### 6.1 转换运算符定义  
+#### 6.2 explicit 转换控制  
+#### 6.3 类型转换序列  
+#### 6.4 转换中的二义性避免
 
 可搭配[[#1.5 explicit构造函数：禁止隐式转换]]使用  表示"返回时 禁止隐式转换"
 # **7. 函数修饰符**  
 
-7.1 const 成员函数语义  
-7.2 noexcept 异常规范  
-7.3 引用限定符应用  
-7.4 constexpr 成员函数  
-7.5 override 和 final
+#### 7.1 const 成员函数语义  
+#### 7.2 noexcept 异常规范  
+#### 7.3 引用限定符应用  
+#### 7.4 constexpr 成员函数  
+#### 7.5 override 和 final
 # **8. 内存管理相关**
 
-8.1 自定义 new 和 delete  
-8.2 定位 new 表达式  
-8.3 内存池实现技巧  
-8.4 智能指针集成
+#### 8.1 自定义 new 和 delete  
+#### 8.2 定位 new 表达式  
+#### 8.3 内存池实现技巧  
+#### 8.4 智能指针集成
 # **9. 特殊成员函数的生成规则**
 
-9.1 默认生成条件  
-9.2 =default 显式默认  
-9.3 =delete 删除函数  
-9.4 生成规则优先级  
-9.5 C++11/14/17/20 规则变化
+#### 9.1 默认生成条件  
+#### 9.2 =default 显式默认  
+#### 9.3 =delete 删除函数  
+#### 9.4 生成规则优先级  
+#### 9.5 C++11/14/17/20 规则变化
 # **10. 设计模式与最佳实践**
 
-10.1 Rule of Three/Five/Zero  
-10.2 单例模式的构造控制  
-10.3 工厂模式的构造封装  
-10.4 Pimpl idiom 实现  
-10.5 异常安全保证级别  
-10.6 性能优化技巧
+#### 10.1 Rule of Three/Five/Zero  
+#### 10.2 单例模式的构造控制  
+#### 10.3 工厂模式的构造封装  
+#### 10.4 Pimpl idiom 实现  
+#### 10.5 异常安全保证级别  
+#### 10.6 性能优化技巧
 
 # 附录：实用工具函数
 
-A.1 swap 函数优化  
-A.2 比较运算符自动生成  
-A.3 哈希函数特化  
-A.4 序列化支持实现
+#### A.1 swap 函数优化  
+#### A.2 比较运算符自动生成  
+#### A.3 哈希函数特化  
+#### A.4 序列化支持实现
 
 # 未分类
 表示禁止此类型的构造方式
