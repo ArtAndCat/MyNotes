@@ -1,8 +1,6 @@
 #菜单 #HTML #CSS #JavaScript #大 #编程
 
-
-
-
+[[HTML多文件编程]]
 
 [[在HTML中展示XML]]
 
@@ -18,13 +16,14 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <head lang="zh-CN">
         <meta charset="utf-8"><!--中文一定要用UTF-8-->
         <!-- 下面这行负责移动端适配 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>文档标题</title>
-        <!-- 在这里声明css文件位置 -->
+        <!-- 在这里声明css和JS文件位置 -->
         <link rel="stylesheet" type="text/css" href="mystyle.css" />
+        <script src="./libs/JS.js"></script><!-- 网页页面前加载 -->
         <style>
             /* CSS的代码写这里 */
             p{
@@ -41,6 +40,9 @@
     <body>
         <!-- 主布局（顺便怎么叫吧...）-->
         <p>hello wold</p>
+        
+        <!-- 网页页面后加载JS -->
+        <script src="JS.js"></script>
     </body>
     
 </html>
@@ -48,6 +50,13 @@
 ###  .CSS文件格式
 css文件
 ```css
+/* 移动端适配  针对小屏幕的样式才会生效 */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
 p
 {
   color:red;
@@ -120,3 +129,23 @@ text用于定义单行的输入字段，用户可在其中输入文
 border-radius:115px;
 box-shadow:2px 2px 25px rgba(0,0,0,.3);
 ```
+
+# 老师的课  
+
+### Class_1
+
+vscode下载与安装 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

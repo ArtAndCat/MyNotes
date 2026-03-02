@@ -1,7 +1,7 @@
 
 【git 详解，10分钟学会】 https://www.bilibili.com/video/BV1Gv421i7wW
 
-
+[[开源协议]]
 
 #  1.Git介绍
 是个版本控制系统    负责代码管理等

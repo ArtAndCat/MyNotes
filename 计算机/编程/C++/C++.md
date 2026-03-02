@@ -1,5 +1,3 @@
-#C #菜单 #编程
-其他涉及
 [[JNI]]  C++与Android Java互通什么的
 [[计算机/编程/C/C|C]] 
 
@@ -44,14 +42,7 @@ g++ -std=c++17 -g -Wall -Wextra -O2 main.cpp -o program
 ```
 ### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">C++异常处理</font></div>
 
-关键字：
-`__PRETTY_FUNCTION__`  返回函数名（C++的，C的只有FUN...）
-`__LINE__` 返回行数   (继承于C)
-比如
-```cpp
-cout << __PRETTY_FUNCTION__ << ':' << __LINE__;
-return -1;
-```
+#### [[C++异常处理]]
 ### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">C++新特性</font></div>
 
 [[C++新特性教程]]

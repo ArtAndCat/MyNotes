@@ -78,7 +78,7 @@ func(MyString("Hello"));  // ✅ 显式构造，OK
 #### 2.3 需要自定义析构函数的情况
 1. new的空间
 2. 一些需要手动关闭/释放的 (成员有写析构函数的可不写)
-#### 2.4 虚析构函数
+#### 2.4 虚析构函数  virtual 
 当类可能被继承时，应将析构函数声明为虚函数
 子类:
 ```cpp
@@ -304,7 +304,75 @@ void func(T&& param) {  // T&& 可能是左值引用或右值引用
 #### 5.1 算术运算符重载  
 #### 5.2 关系运算符重载  
 #### 5.3 下标运算符重载  
-#### 5.4 函数调用运算符  
+
+
+#### 5.4 函数调用运算符 (仿函数)
+
+```cpp
+返回值类型 operator()(参数列表) { /* 实现 */ }
+```
+**效果**：让对象能像函数一样被调用 `对象名(参数)`
+- 本质：重载 `operator()` 的类对象被称为“仿函数”（Function Object）
+- 用途：可保存状态的“智能函数”，常用于算法（如`std::sort`的自定义比较）
+```cpp
+// ✅ 标准示例：加法仿函数
+class Adder {
+    int base;  // 可保存状态
+public:
+    Adder(int n) : base(n) {}
+    
+    // 函数调用运算符重载
+    int operator()(int x) const {
+        return base + x;
+    }
+};
+
+// 使用
+Adder add5(5);
+cout << add5(10);  // ✅ 输出 15，像函数一样调用
+```
+**补充：STL中的仿函数应用**
+```cpp
+#include <algorithm>
+#include <vector>
+
+// 自定义比较仿函数
+class Compare {
+public:
+    bool operator()(int a, int b) const {
+        return a > b;  // 降序排序
+    }
+};
+
+vector<int> v{3, 1, 4, 1, 5};
+sort(v.begin(), v.end(), Compare());  // ✅ 传入仿函数对象
+
+// 等效Lambda表达式（C++11+）
+sort(v.begin(), v.end(), [](int a, int b) { return a > b; });
+```
+**注意事项**
+1. **可保存状态**：相比普通函数，仿函数可在构造时初始化内部状态
+2. **效率优势**：编译器可内联优化，通常比函数指针效率更高
+3. **模板兼容**：标准算法模板要求仿函数，不接受普通函数（除非包装为`std::function`）
+
+
+```cpp
+// 状态保持示例：计数器仿函数
+class Counter {
+    int count;
+public:
+    Counter() : count(0) {}
+    
+    void operator()(int x) {
+        count += x;
+        cout << "当前累计: " << count << endl;
+    }
+};
+
+Counter cnt;
+cnt(10);  // 输出"当前累计: 10"
+cnt(5);   // 输出"当前累计: 15" ✅ 保持状态
+```
 #### 5.5 递增递减运算符  
 #### 5.6 流运算符重载
 # **6. 类型转换函数** 
