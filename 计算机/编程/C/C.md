@@ -40,6 +40,10 @@ printf("%s", str);//这里会打印 helo world
 - 指针类型（xxx* name）
 - 空类型（void name）
 ### ：
+```c
+snprintf(msg, sizeof(msg), "Client connected: %s:%d", ip, port);
+```
+
 
 
 

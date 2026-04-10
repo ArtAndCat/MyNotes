@@ -20,7 +20,7 @@
         <meta charset="utf-8"><!--中文一定要用UTF-8-->
         <!-- 下面这行负责移动端适配 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>文档标题</title>
+        <title>网站标题</title>
         <!-- 在这里声明css和JS文件位置 -->
         <link rel="stylesheet" type="text/css" href="mystyle.css" />
         <script src="./libs/JS.js"></script><!-- 网页页面前加载 -->

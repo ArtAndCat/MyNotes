@@ -2,7 +2,7 @@
 
 作者: 苏丙榅
 bilibili教程参考视频： https://b23.tv/wSO5jKq
-个人网站链接: https://subingwen.cn/linux/socket/
+个人网站笔记链接: https://subingwen.cn/linux/socket/
 来源: 爱编程的大丙
 
 ```cpp

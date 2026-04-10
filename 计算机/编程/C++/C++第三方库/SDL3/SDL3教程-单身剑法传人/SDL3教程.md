@@ -1,8 +1,13 @@
-3
+
 【`SDL3` GPU 01：绘制彩色三角形】 https://www.bilibili.com/video/BV1ABAQeSEBJ
 
 `Gethub`链接 https://github.com/VisualGMQ/SDL3_gpu_example/blob/main/examples
-# 1 绘制彩色三角
+
+补充内容:   [[着色器语言glsl]]
+
+
+
+# 1   绘制彩色三角
 
 `openGL` 渲染管线  固定流程
 现在 可编程渲染管线  自己编程流程
@@ -17,7 +22,8 @@
 - -> 帧缓冲 
 
 ### 渲染流程/渲染通道
-不同渲染管线有不同的功能  ~~有的耗时但效果好 有的速度快但效果差~~ 你可能需要走多个不同的渲染管线
+不同渲染管线有不同的功能  ~~有的耗时但效果好 有的速度快但效果差~~ 你可能需要走多个不同的渲染管线  才可以达到你想要的效果  
+
 
 ### 补充：
 不可编程的地方还是有参数需要设置的参数
@@ -36,3 +42,8 @@ glslc shader.vert -o vert.spv
 ```shell
 glslc shader.frag -o frag.spv
 ```
+
+  不行  太多了 记代码里了
+ 
+
+# 2  
