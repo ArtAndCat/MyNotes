@@ -28,7 +28,22 @@ int[][]... 名字 = new int[数字][]..//这啥？？
 ````
 
 [[Java黑马教程]]（空的）
-### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">没想好写啥</font></div>
+### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">生成与执行</font></div>
+先跟着教材整环境  部分基础知识这里不会记录  
+
+```sh
+javac Main.java # 生成
+java Main # 运行
+```
+
+我们都知道C++中有Makefile(      ) java也没有类似的呢? 有的兄弟 有的
+  Java 企业级用的是 **Maven** 或 **Gradle** 作用类似：管理依赖、编译、打包、运行测试。
+- [[java Maven构建工具]]   用于后端
+- [[java Gradle构建工具]]   用于Android开发
+
+
+### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">编译</font></div>
+
 
 [[java专业术语]]
 [[java关键字]]
