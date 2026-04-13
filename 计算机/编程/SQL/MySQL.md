@@ -8,7 +8,9 @@
 [[懒人数据库]]
 
 [[语法]]
-[[SQL安装]]
+[[SQL安装]] 
+
+外部笔记: [[MySQL数据库设计规范]] [[MySQL数据库开发的三十六条军规]]
 ## \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">MySQL概述  1~4</font></div> 
 
 

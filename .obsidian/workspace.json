@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机/编程/java/java.md",
+                "file": "计算机/编程/java/数据库连接/java与Mysql(准确来说是MariaDB).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "java"
+              "title": "java与Mysql(准确来说是MariaDB)"
             }
           }
         ],
@@ -328,47 +328,80 @@
         "height": 846,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "df5e44040c38794e",
+        "type": "window",
+        "children": [
+          {
+            "id": "e36ff78eb8a83e59",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ef738c7d7d87c1fa",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "计算机/编程/SQL/MySQL.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MySQL"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 448,
+        "height": 846,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
   "active": "a9c62619826015da",
   "lastOpenFiles": [
-    "计算机/编程/java/java Maven构建工具.md",
     "计算机/编程/java/java.md",
-    "README.md",
+    "计算机/编程/java/java代码构建工具/java Maven构建工具.md",
+    "计算机/编程/C++/面向对象/C++ 特殊成员函数.md",
+    "计算机/编程/java/数据库连接/java与Mysql(准确来说是MariaDB).md",
+    "计算机/编程/SQL/MySQL.md",
     "计算机/编程/C++/C++网络/C++ Boost.Asio网络库.md",
     "计算机/编程/C++/新特性系列/文件夹/C++并发编程.md",
+    "计算机/编程/java/杂/main(String() args)是什么？.md",
+    "计算机/设计模式/设计模式.md",
+    "计算机/编程/java/java代码构建工具/java Gradle构建工具.md",
+    "计算机/编程/java/数据库连接",
+    "计算机/编程/java/java代码构建工具",
+    "计算机/外部笔记/notes-master 1/MySQL/MySQL数据库开发的三十六条军规.md",
+    "计算机/编程/SQL/SQL安装.md",
+    "计算机/编程/java/Java黑马教程.md",
+    "计算机/操作系统/Linux/tar 压缩与解压工具.md",
+    "计算机/操作系统/Linux/linux系统.md",
+    "临时文件夹/README.md",
+    "README.md",
     "计算机/编程/java/java访问修饰符.md",
     "计算机/编程/java/java关键字.md",
     "计算机/编程/java/static 修饰符.md",
-    "计算机/编程/java/Java黑马教程.md",
-    "计算机/编程/C++/面向对象/C++ 特殊成员函数.md",
     "计算机/编程/C++/C++网络/项目exe/C++ 网络项目列表.md",
     "计算机/编程/C++/C++网络/项目exe/1/4_ C++ 异步 Echo 服务器代码.md",
     "计算机/编程/C++/C++网络/项目exe/1/3_ C++ 简易双端通信.md",
     "计算机/编程/C++/C++网络/项目exe/1/2_ C++ 同步  简易服务端.md",
     "计算机/杂/termux 和 ffmpeg.md",
     "计算机/编程/C++/C++标准库/().md",
-    "计算机/编程/C++/黑马的C++教程/C++黑马教程.md",
-    "计算机/编程/C++/新特性系列/文件夹/C++lambda表达式.md",
-    "计算机/编程/C++/C++.md",
-    "计算机/编程/C++/C++异常处理.md",
-    "计算机/编程/C/杂/C语言格式说明符完整表格.md",
-    "计算机/编程/C++/C++网络/项目exe/1/1_ C++ 查询外部服务器情况.md",
-    "计算机/编程/C/C.md",
-    "计算机/操作系统/Linux/linux系统.md",
     "计算机/编程/C++/C++网络/项目exe/1",
     "计算机/编程/C++/C++网络/项目exe",
-    "计算机/编程/HTML/CSS/cssbox.md",
     "计算机/编程/C++/C++网络",
-    "计算机/编程/C++/C++第三方库/socket网络/C++sys_socket.h.md",
     "计算机/外部笔记/notes-master 1/Vue/demo2.html",
     "计算机/编程/vue",
     "计算机/测试",
     "计算机/编程/HTML/New/07_学习资源",
     "计算机/编程/HTML/New/06_问题解决",
-    "计算机/编程/HTML/New/05_代码片段库/JS片段",
-    "计算机/编程/HTML/New/05_代码片段库/HTML片段",
     "计算机/编程/C++/黑马的C++教程/01.jpg",
     "Pasted image 20251123012509.png",
     "Pasted image 20251123012503.png"
