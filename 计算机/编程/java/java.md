@@ -38,10 +38,9 @@ java Main # 运行
 
 我们都知道C++中有Makefile(构建工具) java也没有类似的呢? 有的兄弟 有的
   Java 企业级用的是 **Maven** 或 **Gradle** 作用类似：管理依赖、编译、打包、运行测试。
-- [[java Maven构建工具]]   用于后端
+- [[java Maven构建工具]]   用于后端  补充: [[javaMaven 与 git]]
 - [[java Gradle构建工具]]   用于Android 或 Kotlin 项目
  
-
 ### \_\_\_\_<div style="width:100%;height:30px;background-color:rgb(40,40,70);text-align:center;"><font style="font-size:20px">基础</font></div>
 
 
@@ -58,7 +57,7 @@ java Main # 运行
 
 [[java与Mysql(准确来说是MariaDB)]] 
 
-
+[[WEB项目结构]] 
 
 
 

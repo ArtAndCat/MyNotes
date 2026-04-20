@@ -20,7 +20,7 @@ mvn archetype:generate -DgroupId=com.example -DartifactId=hello-app -DarchetypeA
     定义项目的 **groupId**，通常为公司/组织域名的倒序，用于唯一标识项目所属组，类似 C++ 命名空间。
 - **`-DartifactId=hello-app`**  
     定义项目的 **artifactId**，即项目/模块名，最终生成的 JAR 文件名会以此命名。
-- **`-DarchetypeArtifactId=maven-archetype-quickstart`**  
+- **`-DarchetypeArtifactId=maven-archetype-quickstart`**      更多请看补充内容 [[java Maven构建工具#常用 Archetype 模板速查表]]
     指定使用的模板（原型）ID。`maven-archetype-quickstart` 是 Maven 官方提供的简单 Java 项目模板。
 - **`-DinteractiveMode=false`**  
     关闭交互模式，使用命令行传入的参数一次性生成，不询问任何额外选项。
@@ -284,3 +284,71 @@ microservice-platform/
 
 
 
+# 笔记补充内容
+
+## 
+### 常用 Archetype 模板速查表
+
+| 参数 `-DarchetypeArtifactId` 值    | 生成内容                                     | 适用场景                  |
+| ------------------------------- | ---------------------------------------- | --------------------- |
+| `maven-archetype-quickstart`    | 基础 Java 项目（就是你现在这个）                      | 练手、纯 Java SE 程序       |
+| `maven-archetype-webapp`        | 包含 `src/main/webapp` 和 `WEB-INF/web.xml` | 传统 Servlet/JSP 项目（较老） |
+| `spring-boot-starter-parent` 系列 | ==内置 Spring Boot 启动类与配置==                | 现代企业后端主流              |
+
+#### 基础模板
+
+- **`maven-archetype-quickstart`**
+    
+    - **用途**：生成一个最简单的标准 Java 项目（JAR）[](https://cloud.tencent.com.cn/developer/article/1773579?from=15425)。
+        
+    - **何时使用**：开发一个Java库、命令行工具，或者任何不需要Web容器的Java应用[](https://cloud.tencent.com.cn/developer/article/1704358?from=15425)。
+        
+    - **⭐ 对你的意义**：这是我们之前创建 `hello-app` 时用的，你现在**99%的情况都会用它**来练习或开发工具。
+        
+
+#### Web开发模板
+
+- **`maven-archetype-webapp`**
+    
+    - **用途**：生成一个基础的Java Web应用程序项目（WAR）[](https://cloud.tencent.com.cn/developer/article/1773579?from=15425)[](https://maven.apache.org/archetypes/index.html)。
+        
+    - **何时使用**：创建传统的、需要部署到Tomcat等Web容器的Java Web项目（如Servlet/JSP应用）[](https://cloud.tencent.com.cn/developer/article/1704358?from=15425)。
+        
+    - **对你的意义**：如果你想学传统的 Java Web 开发（Servlet/JSP），可以从这里开始。但请注意，现代后端开发更多使用 Spring Boot 这类嵌入式框架，其项目结构与此有所不同。
+        
+
+#### 其他模板
+
+- **`maven-archetype-plugin`**
+    
+    - **用途**：生成一个示例 Maven 插件项目[](https://maven.apache.org/archetypes/index.html)。
+        
+    - **何时使用**：当你需要开发自定义的 Maven 插件以扩展其功能时。
+        
+    - **对你的意义**：目前用不上，这是开发 Maven 自身工具时用的。
+        
+- **`maven-archetype-site`**
+    
+    - **用途**：生成一个示例 Maven 项目站点[](https://maven.apache.org/archetypes/index.html)。
+        
+    - **何时使用**：为你的项目生成一个包含文档、报告等信息的标准网站。
+        
+    - **对你的意义**：目前用不上，等你需要为项目写正式文档时再考虑。
+        
+
+> **补充说明**：Maven官方提供的Archetype模板还有许多，如用于生成EJB、Portlet等特定技术栈的[](https://maven.apache.org/archetypes/index.html)。但对于入门和一般后端开发，上述几种已基本够用。
+
+#### 如何使用与发现模板
+
+- **如何指定**：使用命令 `mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart`[](https://cloud.tencent.com.cn/developer/article/1773579?from=15425)。如果省略此参数，默认使用的就是 `maven-archetype-quickstart`[](https://maven.org.cn/plugins-archives/maven-archetype-plugin-1.0-alpha-7/usage.html)[](https://www.sonatype.com/maven-complete-reference/using-maven-archetypes)。
+    
+- **如何发现更多模板**：
+    
+    1. **最简单的方法**：只运行 `mvn archetype:generate`，Maven 会进入**交互模式**，列出大量可用模板，你只需输入编号来选择[](https://www.sonatype.com/maven-complete-reference/using-maven-archetypes)。
+        
+    2. **主动查询**：你可以访问 [Maven 官方 Archetype 目录](https://maven.apache.org/archetypes/index.html) 查看完整的官方列表[](https://cloud.tencent.com.cn/developer/article/1704358?from=15425)。此外，许多第三方框架（如 Spring、Vaadin等）也提供自己的 `archetypeArtifactId`，用于快速生成特定框架的项目脚手架。
+
+
+###
+###
+###

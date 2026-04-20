@@ -89,7 +89,7 @@ CREATE DATABASE [ IF NOT EXISTS ] 数据库名[ DEFAULT CHARSET 字符集] [ COL
 ```sql
 ALTER DATABASE 数据库名 [ [ DEFAULT ] CHARSET 字符集] [ COLLATE 排序规则 or 校对规则 ];
 ```
-删除数据库：
+删z除数据库：
 ```SQL
 DROP DATABASE [ IF EXISTS ] 数据库名;
 ```
