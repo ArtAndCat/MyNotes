@@ -1,4 +1,5 @@
 
+[[MySQL]] 
 打开通过 Maven构建工具 创建的项目 打开pom.xml  
 
  **添加 MySQL 驱动依赖**：  
@@ -11,7 +12,7 @@
 </dependency>
 ```
 
-
+快速项目:
 ```java
 //src/main/java/com/example/App.java
 package com.example;  // 包名，对应目录结构 com/example/App.java
@@ -68,6 +69,14 @@ INSERT INTO student VALUES(1, 'ZhangSan');
 mvn compile exec:java -Dexec.mainClass="com.example.App"
 ```
 
-
+so
+```java
+// 1. 数据库连接 URL（类似 C++ 里的连接字符串）
+// 格式：jdbc:mysql://主机:端口/数据库名?参数
+// 3306 是 MySQL 默认端口
+String url = "jdbc:mysql://localhost:3306/testdb";
+String user = "root";
+String password = "114514"; // 改成你实际设置的 MariaDB root 密码
+```
 
 
