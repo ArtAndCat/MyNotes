@@ -395,12 +395,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "计算机/编程/java/javaMaven 与 git.md",
+                    "file": "计算机/编程/java/java与前端.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "javaMaven 与 git"
+                  "title": "java与前端"
                 }
               }
             ]
@@ -409,8 +409,8 @@
         "direction": "vertical",
         "x": 0,
         "y": 0,
-        "width": 753,
-        "height": 574,
+        "width": 664,
+        "height": 846,
         "maximize": false,
         "zoom": 0
       }
@@ -419,6 +419,7 @@
   "active": "99fcb01ae0f8e6e8",
   "lastOpenFiles": [
     "计算机/编程/java/java.md",
+    "计算机/编程/java/java与前端.md",
     "计算机/编程/java/javaMaven 与 git.md",
     "计算机/编程/java/java代码构建工具/java Maven构建工具.md",
     "计算机/外部笔记/notes-master 1/Git/常用Git命令清单.md",
@@ -445,7 +446,6 @@
     "计算机/编程/HTML/各种模板/二级菜单/移动端适配.md",
     "计算机/编程/HTML/各种模板/二级菜单/侧边栏 手风琴菜单(后台管理常用).md",
     "计算机/编程/HTML/各种模板/二级菜单/顶部横向导航菜单 (最常用).md",
-    "计算机/编程/HTML/CSS/cssflex.md",
     "计算机/编程/HTML/各种模板/二级菜单",
     "计算机/编程/HTML/各种模板",
     "计算机/编程/java/数据库连接",
