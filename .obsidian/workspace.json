@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "715be4efab774c9c",
@@ -409,7 +410,7 @@
         "x": 0,
         "y": 0,
         "width": 729,
-        "height": 593,
+        "height": 622,
         "maximize": false,
         "zoom": 0
       }
@@ -417,19 +418,19 @@
   },
   "active": "4ce550ea3cc02b89",
   "lastOpenFiles": [
-    "计算机/设计模式/设计模式.md",
+    "计算机/编程/SQL/MySQL.md",
+    "计算机/编程/java/java.md",
     "计算机/编程/未分类的通用知识/线程池.md",
+    "计算机/编程/C++/C++标准库/STL库/STL容器.md",
+    "计算机/设计模式/设计模式.md",
     "计算机/编程/未分类的通用知识",
     "计算机/外部笔记/notes-master 1/Git/常用Git命令清单.md",
-    "计算机/编程/java/java.md",
     "计算机/编程/java/java与前端.md",
     "计算机/编程/C++/新特性系列/文件夹/C++并发编程.md",
-    "计算机/编程/SQL/MySQL.md",
     "计算机/编程/java/javaMaven 与 git.md",
     "计算机/编程/java/java代码构建工具/java Maven构建工具.md",
     "计算机/编程/java/WEB项目结构.md",
     "计算机/编程/SQL/懒人数据库.md",
-    "计算机/编程/C++/C++标准库/STL库/STL容器.md",
     "计算机/编程/C++/C++标准库/STL库/map与multimap 容器.md",
     "计算机/编程/C++/C++标准库/C++STL库 （标准模板库）.md",
     "计算机/编程/C++/黑马的C++教程/C++黑马教程.md",
